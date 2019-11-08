@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1>Object</h1>
+    <h2>Create</h2>
+    <script>
+      var 비행운 = {
+        "현실":"큐티클",
+        "충격":"서른"
+      };
+      document.write("현실 : "+비행운.현실+"<br>");
+      document.write("충격 : "+비행운.충격+"<br>");
+      비행운.보편 = "너의 여름은 어떠니";
+      document.write("보편 : "+비행운.보편 +"<br>");
+      비행운["필연적 엇갈림"] = "호텔 니앗따" //이름에는 공백 못 넣고 . 대신 대괄호 쓰고 그 안에문자
+      document.write("필연적 엇갈림 : "+비행운["필연적 엇갈림"]+"<br>");
+    </script>
+    <h2>Iterate</h2>
+    <script>
+     for(var key in 비행운) {
+       document.write(key+' : '+ 비행운[key]+'<br>');
+     } //key 와 index는 순서의 차이
+    </script>
+    <h2>Property & Method</h2>
+    <script>
+     비행운.showAll = function(){
+       for(var key in this) {//showAll은 사라지게할 수 있다)
+         document.write(key+' : '+ this[key]+'<br>');
+       }
+     }
+     비행운.showAll(); // 개체 소속 함수는 메소드, 변수는 프로퍼티
+    </script>
+  </body>
+</html>
